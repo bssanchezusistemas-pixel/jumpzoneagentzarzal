@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Jumping Fit — Reservar clase</title>
+
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body class="jf-site reserva-page">
+
+  <header class="jf-header">
+
+    <a href="/web/" class="jf-brand">
+
+      <img src="assets/logo.png" alt="Jumping Fit" class="jf-logo-sm" width="64" height="64" />
+
+      <span>Jumping Fit</span>
+
+    </a>
+
+    <nav class="jf-nav">
+
+      <a href="/admin" class="jf-link-panel" title="Panel administración">🔒 Acceso panel</a>
+
+      <button type="button" class="jf-btn-cta" id="btn-ir-reservar">Reservar clase</button>
+
+    </nav>
+
+  </header>
+
+
+
+  <section class="jf-hero" id="hero">
+
+    <img src="assets/logo.png" alt="" class="jf-logo-hero" width="520" height="520" />
+
+    <h1 class="jf-hero-title" id="hero-nombre">Jumping Fit</h1>
+
+    <p class="jf-slogan" id="hero-slogan">Salta, quema y transforma tu vida</p>
+
+    <div class="jf-chips">
+
+      <span class="jf-chip" id="chip-horario">Lun–Sáb 5am–9pm</span>
+
+      <span class="jf-chip" id="chip-ubicacion">Roldanillo, Valle del Cauca</span>
+
+    </div>
+
+    <button type="button" class="jf-btn-cta jf-btn-hero" id="btn-hero-reservar">Reservar mi clase</button>
+
+  </section>
+
+
+
+  <main class="jf-main" id="reservar">
+
+    <div class="jf-stepper" aria-label="Pasos de reserva">
+
+      <div class="jf-step activo" data-step="1"><span>1</span> Plan</div>
+
+      <div class="jf-step" data-step="2"><span>2</span> Día y hora</div>
+
+      <div class="jf-step" data-step="3"><span>3</span> Tus datos</div>
+
+      <div class="jf-step" data-step="4"><span>4</span> Listo</div>
+
+    </div>
+
+
+
+    <div class="jf-wizard-card wizard">
+
+      <section id="paso-plan" class="paso activo">
+
+        <h2>Elige tu plan</h2>
+
+        <p class="hint">Selecciona cuántas clases quieres reservar.</p>
+
+        <div id="planes-grid" class="planes-grid"></div>
+
+      </section>
+
+
+
+      <section id="paso-horarios" class="paso">
+
+        <h2>Elige día y horario</h2>
+
+        <p class="hint" id="hint-clases"></p>
+
+        <div id="calendario-wrap" class="calendario-wrap">
+
+          <div class="cal-nav">
+
+            <button type="button" class="cal-nav-btn" id="cal-prev" aria-label="Mes anterior">‹</button>
+
+            <span id="cal-titulo" class="cal-titulo"></span>
+
+            <button type="button" class="cal-nav-btn" id="cal-next" aria-label="Mes siguiente">›</button>
+
+          </div>
+
+          <div class="cal-grid cal-dias-semana" aria-hidden="true">
+
+            <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
+
+          </div>
+
+          <div id="cal-grid" class="cal-grid" role="grid" aria-label="Calendario de reservas"></div>
+
+        </div>
+
+        <div id="slots-panel" class="slots-panel hidden">
+
+          <h3 id="slots-dia-titulo" class="slots-dia-titulo"></h3>
+
+          <div id="slots-picker" class="slots-picker"></div>
+
+        </div>
+
+        <p id="slots-placeholder" class="slots-placeholder">Toca un día en el calendario para ver los horarios disponibles.</p>
+
+        <div id="elegidos" class="elegidos hidden"></div>
+
+        <button type="button" class="btn-sec" id="btn-atras-plan">← Cambiar plan</button>
+
+        <button type="button" class="btn-principal" id="btn-a-form" disabled>Continuar</button>
+
+      </section>
+
+
+
+      <section id="paso-form" class="paso">
+
+        <h2>Tus datos</h2>
+
+        <form id="form-reserva">
+
+          <label class="label-grande">Nombre
+
+            <input type="text" name="nombre" required placeholder="Tu nombre" autocomplete="name" />
+
+          </label>
+
+          <label class="label-grande">WhatsApp / celular
+
+            <input type="tel" name="telefono" required placeholder="300 123 4567" autocomplete="tel" />
+
+          </label>
+
+          <fieldset class="pago-fieldset">
+
+            <legend>Forma de pago</legend>
+
+            <label class="radio-grande"><input type="radio" name="metodo" value="efectivo" checked /> Efectivo en el centro</label>
+
+            <label class="radio-grande"><input type="radio" name="metodo" value="transferencia" /> Transferencia / Nequi</label>
+
+          </fieldset>
+
+          <div id="datos-pago" class="pago-box hidden">
+
+            <p id="texto-nequi"></p>
+
+            <p id="texto-banco"></p>
+
+            <label class="label-grande">Sube tu comprobante (opcional ahora)
+
+              <input type="file" id="comprobante" accept="image/*" />
+
+            </label>
+
+          </div>
+
+          <button type="submit" class="btn-principal btn-xl">Confirmar reserva</button>
+
+        </form>
+
+        <button type="button" class="btn-sec" id="btn-atras-horarios">← Cambiar horarios</button>
+
+      </section>
+
+
+
+      <section id="paso-exito" class="paso">
+
+        <div class="exito-icon">✓</div>
+
+        <h2>¡Reserva registrada!</h2>
+
+        <p id="texto-exito"></p>
+
+        <p class="nota-pago" id="nota-exito"></p>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+
+  <footer class="jf-footer">
+
+    <p id="footer-whatsapp"></p>
+
+    <p><a href="#" id="footer-instagram" target="_blank" rel="noopener">Síguenos en Instagram</a></p>
+
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+  <script src="motion.js"></script>
+
+  <script src="reserva.js"></script>
+
+</body>
+
+</html>
+
+

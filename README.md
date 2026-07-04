@@ -116,6 +116,8 @@ Cuando estes satisfecho con tu agente, Claude Code te guia para ponerlo en linea
 4. **Configuras las variables** — Claude Code te dice exactamente cuales poner en Railway (las mismas API keys de tu .env)
 5. **Configuras el webhook** — Claude Code te guia para conectar tu proveedor de WhatsApp con la URL de Railway
 
+Runbook Jumping Fit (Cloudflare + Supabase + Meta coexistence): [`docs/PRODUCCION_CLOUDFLARE_SUPABASE.md`](docs/PRODUCCION_CLOUDFLARE_SUPABASE.md)
+
 Despues de esto, cualquier persona que te escriba por WhatsApp sera atendida por tu agente.
 
 **Nota:** No necesitas saber de servidores ni de deploy. Claude Code te dice cada paso, que escribir y donde hacer click.

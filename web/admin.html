@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Jumping Fit — Panel</title>
+
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body class="jf-site admin-body">
+
+  <section id="vista-login" class="jf-login-wrap">
+
+    <div class="jf-login-card" id="login-card">
+
+      <img src="assets/logo.png" alt="Jumping Fit" class="jf-logo-login" width="120" height="120" />
+
+      <h1>Panel Jumping Fit</h1>
+
+      <p class="hint">Ingresa para gestionar reservas y pagos.</p>
+
+      <form id="form-login" class="jf-login-form">
+
+        <label class="label-grande">Usuario
+
+          <input type="text" name="usuario" required autocomplete="username" />
+
+        </label>
+
+        <label class="label-grande">Contraseña
+
+          <input type="password" name="password" required autocomplete="current-password" />
+
+        </label>
+
+        <p id="login-error" class="jf-login-error hidden" role="alert"></p>
+
+        <button type="submit" class="btn-principal btn-xl">Entrar</button>
+
+      </form>
+
+      <p class="jf-login-back"><a href="/web/">← Volver a reservas</a></p>
+
+    </div>
+
+  </section>
+
+
+
+  <div id="vista-panel" class="hidden">
+
+    <header class="jf-header jf-header-panel">
+
+      <div class="jf-brand">
+
+        <img src="assets/logo.png" alt="" class="jf-logo-sm" width="40" height="40" />
+
+        <span>Panel Jumping Fit</span>
+
+      </div>
+
+      <button type="button" class="jf-btn-logout" id="btn-logout">Cerrar sesión</button>
+
+    </header>
+
+    <nav class="tabs">
+
+      <button type="button" class="tab activo" data-tab="pendientes">Pagos pendientes</button>
+
+      <button type="button" class="tab" data-tab="hoy">Clases de hoy</button>
+
+    </nav>
+
+
+
+    <main class="admin-main">
+
+      <section id="tab-pendientes" class="tab-panel activo">
+
+        <button type="button" class="btn-principal btn-xl" id="btn-recargar">Actualizar lista</button>
+
+        <div id="lista-pendientes" class="admin-cards"></div>
+
+      </section>
+
+
+
+      <section id="tab-hoy" class="tab-panel">
+
+        <label class="label-grande">Fecha <input type="date" id="fecha-hoy" /></label>
+
+        <button type="button" class="btn-sec" id="btn-hoy">Ver clases</button>
+
+        <div id="lista-hoy" class="admin-cards"></div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+  <script src="motion.js"></script>
+
+  <script src="admin.js"></script>
+
+</body>
+
+</html>
+
+
