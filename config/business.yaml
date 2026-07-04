@@ -1,0 +1,95 @@
+# Centro de entrenamiento Jumping — Producción
+
+negocio:
+
+  nombre: "Jumping Fit"
+
+  slogan: "Salta, quema y transforma tu vida"
+
+  ubicacion: "Roldanillo, Valle del Cauca"
+
+  descripcion: "Centro de entrenamiento de jumping. Máximo 15 personas por hora."
+
+  horario: "Lunes a sábado 5:00 a.m. a 9:00 p.m. Domingos cerrado."
+
+  cupo_maximo_por_hora: 15
+
+  anticipacion_reprogramar_horas: 24
+
+  max_reprogramaciones_por_plan: 1
+
+
+
+web:
+
+  url_publica: "https://TU-DOMINIO.com/web/"
+
+  instagram: "https://www.instagram.com/jumping__fit_/"
+
+
+
+planes:
+
+  dia: 0          # Pendiente confirmar precio con cliente
+
+  semana: 90000   # 3 clases
+
+  quincena: 160000 # 6 clases
+
+  mes: 280000      # 12 clases
+
+
+
+agente:
+
+  nombre: "JumpBot"
+
+  tono: "directo, claro y fácil de entender"
+
+  mensaje_bienvenida: |
+
+    Hola, soy JumpBot de Jumping Fit.
+
+    Para reservar tu clase entra aquí: {web_url}
+
+    También puedo resolver dudas, recibir tu comprobante de pago o conectarte con la dueña.
+
+
+
+pagos:
+
+  metodos:
+
+    - "Efectivo en el centro"
+
+    - "Transferencia / Nequi"
+
+  nequi: "300 123 4567"
+
+  banco: "Bancolombia — Cuenta 12345678901 — Jumping Fit"
+
+  titular: "Jumping Fit Centro"
+
+
+
+admin:
+
+  telefonos:
+
+    - "+573013892917"
+
+
+
+humanos:
+
+  telefono_escalacion: "+573013892917"
+
+  mensaje_escalacion: "Un cliente necesita ayuda. Tel: {telefono} — Mensaje: {texto}"
+
+
+
+metadata:
+
+  version: "3.1-jumping-fit"
+
+
